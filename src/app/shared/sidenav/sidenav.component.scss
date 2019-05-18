@@ -1,0 +1,24 @@
+@import "variables";
+
+nav {
+    padding: 20px 0;
+    background: mat-color($app-primary, 900);
+    height: 100%;
+}
+
+:host ::ng-deep app-sidenav-item {
+    display: block;
+
+    a {
+        color: $primary;
+        text-decoration: none;
+        padding: 10px 40px;
+        display: block;
+
+        &.active,
+        &:hover {
+            color: $warn
+        }
+
+    }
+}
