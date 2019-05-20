@@ -10,6 +10,10 @@ const routes: Routes = [
       {
         path: '',
         loadChildren: './dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: 'reservations',
+        loadChildren: './reservations/reservations.module#ReservationsModule'
       }
     ]
   }

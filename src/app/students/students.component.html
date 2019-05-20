@@ -1,6 +1,7 @@
 <div class="d-flex wrapper">
   <app-sidenav>
-    <app-sidenav-item><a routerLink="/students" routerLinkActive="active">Home</a></app-sidenav-item>
+    <app-sidenav-item><a routerLink="/students" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Home</a></app-sidenav-item>
     <app-sidenav-item><a routerLink="/students/profile" routerLinkActive="active">Profile settings</a>
     </app-sidenav-item>
     <app-sidenav-item><a routerLink="/students/reservations" routerLinkActive="active">Reservations</a>
