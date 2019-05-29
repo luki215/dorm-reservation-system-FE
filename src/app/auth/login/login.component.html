@@ -1,0 +1,17 @@
+<mat-toolbar>{{'UNI-login' | translate}}</mat-toolbar>
+<form [formGroup]="form" (submit)="onSubmit()">
+  <mat-form-field>
+    <input matInput type="text" placeholder="{{'UNI-email' | translate}}" formControlName="email">
+    <mat-error *ngIf="form.get('email').invalid">{{'UNI-field-required' | translate}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="password" formControlName="password" placeholder="{{'UNI-password' | translate}}">
+    <mat-error *ngIf="form.get('password').invalid">{{'UNI-field-required' | translate}}</mat-error>
+  </mat-form-field>
+
+  <ng-container *ngIf="form.errors?.beErrors">
+    <mat-error *ngFor="let err of form.errors?.beErrors">{{err}}</mat-error>
+  </ng-container>
+
+  <button mat-raised-button color="primary" type="submit">{{'UNI-login' | translate}}</button>
+</form>
