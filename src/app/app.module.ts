@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { ReservationsModule } from './students/reservations/reservations.module'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ReservationsModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, ReservationsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })

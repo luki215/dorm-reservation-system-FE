@@ -1,6 +1,12 @@
 {
     "UNI-dashboard": "Nástěnka",
-    "UNI-alliance": "Aliance",
+    "UNI-alliances": "Aliance",
     "UNI-my-reservations": "Mé rezervace",
-    "UNI-reservations": "Rezervace"
+    "UNI-reservations": "Rezervace",
+    "UNI-email": "Email",
+    "UNI-password": "Heslo",
+    "UNI-login": "Přihlásit se",
+    "UNI-logout": "Odhlásit se",
+    "UNI-field-required": "Toto pole je vyžadováno",
+    "UNI-profile_settings": "Profil"
 }
