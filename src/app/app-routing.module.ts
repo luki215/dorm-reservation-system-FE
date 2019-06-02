@@ -11,8 +11,8 @@ const routes: Routes = [
     component: AppComponent,
     children: [
       { path: '', component: AppComponent, pathMatch: 'full', canActivate: [RootGuard] },
-      { path: 'students', loadChildren: './students/students.module#StudentsModule', canActivate: [StudentsGuard] },
-      { path: 'login', loadChildren: './auth/login.module#LoginModule', canActivate: [LoginGuard] }
+      { path: 'students', loadChildren: () => import('./students/students.module').then(m => m.StudentsModule), canActivate: [StudentsGuard] },
+      { path: 'login', loadChildren: () => import('./auth/login.module').then(m => m.LoginModule), canActivate: [LoginGuard] }
     ]
   }
 ];

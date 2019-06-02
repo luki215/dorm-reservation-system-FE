@@ -9,11 +9,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: './dashboard/dashboard.module#DashboardModule'
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
         path: 'reservations',
-        loadChildren: './reservations/reservations.module#ReservationsModule'
+        loadChildren: () => import('./reservations/reservations.module').then(m => m.ReservationsModule)
       }
     ]
   }
