@@ -1,10 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ReplaySubject, Observable } from 'rxjs';
-import { User, LoginRequest, LoginResponse } from './auth.interfaces';
+import { LoginRequest, LoginResponse } from './auth.interfaces';
 import { environment } from 'src/environments/environment';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { User } from '../shared/interfaces/user.interface';
 
 @Injectable({
   providedIn: 'root'

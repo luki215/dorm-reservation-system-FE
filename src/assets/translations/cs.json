@@ -8,5 +8,14 @@
     "UNI-login": "Přihlásit se",
     "UNI-logout": "Odhlásit se",
     "UNI-field-required": "Toto pole je vyžadováno",
-    "UNI-profile_settings": "Profil"
+    "UNI-profile_settings": "Profil",
+    "UNI-male": "Muž",
+    "UNI-female": "Žena",
+    "UNI-name": "Jméno",
+
+
+
+
+
+    "Profile-alliance_enable": "Povolit aliance"
 }

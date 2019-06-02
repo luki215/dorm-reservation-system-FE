@@ -9,11 +9,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+        loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
       },
       {
         path: 'reservations',
-        loadChildren: () => import('./reservations/reservations.module').then(m => m.ReservationsModule)
+        loadChildren: () => import('./reservations/reservations.module').then((m) => m.ReservationsModule)
+      },
+      {
+        path: 'profile-settings',
+        loadChildren: () => import('./profile-settings/profile-settings.module').then((m) => m.ProfileSettingsModule)
       }
     ]
   }
