@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <app-profile-form></app-profile-form>
+      <app-profile-form [user]="me$ | async"></app-profile-form>
     </div>
   </div>
 </div>

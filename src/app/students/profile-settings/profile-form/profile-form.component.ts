@@ -20,10 +20,10 @@ export class ProfileFormComponent implements OnInit {
     email: [],
     name: [],
     sex: [],
-    allianceEnable: [],
-    switchRoomEnable: [],
-    differentSexOnRoomEnable: [],
-    differentSexOnCellEnable: [],
+    allianceEnable: [false],
+    switchRoomEnable: [true],
+    differentSexOnRoomEnable: [false],
+    differentSexOnCellEnable: [false],
     note: []
   });
 

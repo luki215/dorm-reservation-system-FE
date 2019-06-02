@@ -6,19 +6,36 @@
     <input matInput type="text" formControlName="name" placeholder="{{'UNI-name' | translate}}" readonly="true">
   </mat-form-field>
 
-  <mat-radio-group aria-label="Select sex" [color]="'primary'">
+  <mat-radio-group aria-label="Select sex" color="primary">
     <mat-radio-button *ngFor="let sex of sexOptions" [value]="sex">{{ getSexTranslationString(sex) | translate}}
     </mat-radio-button>
   </mat-radio-group>
 
   <mat-slide-toggle formControlName="allianceEnable" color="primary">{{'Profile-alliance_enable' | translate}}
   </mat-slide-toggle>
+  <div *ngIf="form.get('allianceEnable').value" class="input-note">
+    {{'Profile-alliance_enable_privacy_note' | translate}}
+  </div>
 
+  <mat-slide-toggle formControlName="switchRoomEnable" color="primary">{{'Profile-switch_room_enable' | translate}}
+  </mat-slide-toggle>
 
+  <mat-slide-toggle formControlName="differentSexOnRoomEnable" color="primary">
+    {{'Profile-differnet_sex_on_room_enable' | translate}}
+  </mat-slide-toggle>
+
+  <mat-slide-toggle formControlName="differentSexOnCellEnable" color="primary">
+    {{'Profile-differnet_sex_on_cell_enable' | translate}}
+  </mat-slide-toggle>
+
+  <mat-form-field>
+    <textarea matInput [matTextareaAutosize]="true" placeholder="{{'Profile-note-for-others' | translate}}"></textarea>
+  </mat-form-field>
 
   <ng-container *ngIf="form.errors?.beErrors">
     <mat-error *ngFor="let err of form.errors?.beErrors">{{err}}</mat-error>
   </ng-container>
 
-  <button mat-raised-button color="primary" type="submit">{{'UNI-login' | translate}}</button>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="form.pristine">{{'UNI-save' | translate}}</button>
 </form>

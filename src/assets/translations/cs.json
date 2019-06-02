@@ -12,10 +12,16 @@
     "UNI-male": "Muž",
     "UNI-female": "Žena",
     "UNI-name": "Jméno",
+    "UNI-save": "Uložit",
 
 
 
 
 
-    "Profile-alliance_enable": "Povolit aliance"
+    "Profile-alliance_enable": "Používat aliance",
+    "Profile-switch_room_enable": "Prohazování míst s ostatními",
+    "Profile-differnet_sex_on_room_enable": "Jiné pohlaví na pokoji",
+    "Profile-differnet_sex_on_cell_enable": "Jiné pohlaví na buňce",
+    "Profile-alliance_enable_privacy_note": "Používáním aliancí dávate souhlas se zveřejněním všech údajů v tomto formuláři všem uživatelům této aplikace.",
+    "Profile-note-for-others": "Poznámka pro ostatní"
 }

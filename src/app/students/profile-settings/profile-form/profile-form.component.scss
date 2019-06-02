@@ -13,7 +13,9 @@ form {
         margin-left: 15px;
     }
 
-    mat-radio-group {
+    mat-radio-group,
+    mat-slide-toggle {
         padding-bottom: 1.25em;
     }
+
 }
