@@ -1,4 +1,4 @@
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { TranslationsModule } from './../../shared/translations/translations.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
