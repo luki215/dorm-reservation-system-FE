@@ -6,14 +6,18 @@ export type SideNavState = 'open' | 'closed';
   providedIn: 'root'
 })
 export class SideNavService {
-  state = new BehaviorSubject<SideNavState>('open');
+  private state = new BehaviorSubject<SideNavState>('closed');
   constructor() {}
 
-  public setSideNavState(newState: SideNavState): void {
+  public setState(newState: SideNavState): void {
     this.state.next(newState);
   }
 
-  public getSideNavState(): Observable<SideNavState> {
+  public getState(): Observable<SideNavState> {
     return this.state.asObservable();
+  }
+
+  public toggleState() {
+    this.state.next(this.state.value === 'open' ? 'closed' : 'open');
   }
 }

@@ -1,10 +1,9 @@
-import { TranslationsModule } from './../../shared/translations/translations.module';
+import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 const routes: Routes = [
   {
@@ -15,6 +14,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [DashboardComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), MatToolbarModule, MatCardModule, TranslationsModule]
+  imports: [CommonModule, RouterModule.forChild(routes), MatCardModule, SharedModule]
 })
 export class DashboardModule {}

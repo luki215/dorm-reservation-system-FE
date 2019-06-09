@@ -9,11 +9,11 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  public sideNavOpen$: Observable<boolean>;
+  public sideNavClosed$: Observable<boolean>;
 
   constructor(private sidenavService: SideNavService) {}
 
   ngOnInit() {
-    this.sideNavOpen$ = this.sidenavService.getSideNavState().pipe(map((x) => x === 'open'));
+    this.sideNavClosed$ = this.sidenavService.getState().pipe(map((x) => x === 'closed'));
   }
 }

@@ -1,5 +1,6 @@
 // Import material theming functions
 @import '~@angular/material/theming';
+@import 'node_modules/bootstrap/scss/mixins';
 
 // Copy the palettes from your selected theme (usually theme.scss).
 $app-primary: mat-palette($mat-grey);
@@ -10,3 +11,10 @@ $app-warn: mat-palette($mat-pink);
 $primary: mat-color($app-primary);
 $accent: mat-color($app-accent);
 $warn: mat-color($app-warn);
+
+
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1154px);

@@ -4,6 +4,18 @@ nav {
     padding: 20px 0;
     background: mat-color($app-primary, 900);
     height: 100%;
+    animation: margin 1s;
+    overflow: hidden;
+    transition: margin 100ms ease-in-out;
+    margin-left: 0;
+
+    &.hide {
+        margin-left: -160px;
+
+        @include media-breakpoint-up(sm) {
+            margin-left: 0;
+        }
+    }
 }
 
 :host ::ng-deep app-sidenav-item {
@@ -14,6 +26,7 @@ nav {
         text-decoration: none;
         padding: 10px 40px;
         display: block;
+        white-space: nowrap;
 
         &.active,
         &:hover {

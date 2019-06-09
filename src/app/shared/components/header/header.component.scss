@@ -1,0 +1,7 @@
+@import "variables";
+
+app-sidenav-switch {
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+}

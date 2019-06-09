@@ -2,14 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileSettingsComponent } from './profile-settings.component';
 import { Routes, RouterModule } from '@angular/router';
-import { TranslationsModule } from 'src/app/shared/translations/translations.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileFormComponent } from './profile-form/profile-form.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [
   {
@@ -23,8 +22,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MatToolbarModule,
-    TranslationsModule,
+    SharedModule,
     ReactiveFormsModule,
     MatInputModule,
     MatRadioModule,
