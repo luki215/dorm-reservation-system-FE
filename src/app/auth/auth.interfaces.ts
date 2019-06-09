@@ -1,8 +1,4 @@
-export interface User {
-  admin: boolean;
-  email: string;
-  id: number;
-}
+import { User } from '../shared/interfaces/user.interface';
 
 export interface LoginRequest {
   email: string;
